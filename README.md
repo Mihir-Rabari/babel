@@ -2,6 +2,9 @@
 
 **Two people. Two languages. One conversation.**
 
+Demo video (1:46, real live runs):
+[github.com/Mihir-Rabari/babel/releases/tag/v0.1.0](https://github.com/Mihir-Rabari/babel/releases/tag/v0.1.0)
+
 A live bilingual voice interpreter: Speaker A talks in their language, Babel
 live-dictates what they said (verbatim **and** cleaned), translates it, and
 speaks the translation to Speaker B *in B's language* — and vice versa, in one
