@@ -61,6 +61,26 @@
           "timeline"
         ]
       }
+    },
+    {
+      "name": "conv_a_en",
+      "voice": "en",
+      "text": "Hey! Before we ship, can we go through the migration plan together? I want to make sure the database switch happens on Thursday.",
+      "planted": {
+        "verbatim_markers": [
+          "migration"
+        ]
+      }
+    },
+    {
+      "name": "conv_b_es",
+      "voice": "es",
+      "text": "¡Claro que sí! Pero primero, ¿podemos revisar el presupuesto del proyecto?",
+      "planted": {
+        "verbatim_markers": [
+          "presupuesto"
+        ]
+      }
     }
   ]
 }

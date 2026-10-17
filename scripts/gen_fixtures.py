@@ -61,6 +61,19 @@ CLIPS = [
             "translation_en_gist": ["project", "timeline"],
         },
     },
+    {
+        "name": "conv_a_en",
+        "voice": "en",
+        "text": ("Hey! Before we ship, can we go through the migration plan together? "
+                 "I want to make sure the database switch happens on Thursday."),
+        "planted": {"verbatim_markers": ["migration"]},
+    },
+    {
+        "name": "conv_b_es",
+        "voice": "es",
+        "text": "¡Claro que sí! Pero primero, ¿podemos revisar el presupuesto del proyecto?",
+        "planted": {"verbatim_markers": ["presupuesto"]},
+    },
 ]
 
 
@@ -84,6 +97,14 @@ async def main() -> None:
     with open(manifest_path, "w") as f:
         json.dump({"clips": CLIPS}, f, indent=2, ensure_ascii=False)
     print(f"manifest: {manifest_path}")
+    # bundle the clips for the mic-free demo-replay mode (committed to the repo)
+    import shutil
+    samples_dir = os.path.join(HERE, "..", "static", "samples")
+    os.makedirs(samples_dir, exist_ok=True)
+    for clip in CLIPS:
+        shutil.copy(os.path.join(FIXTURES, clip["name"] + ".wav"),
+                    os.path.join(samples_dir, clip["name"] + ".wav"))
+    print(f"bundled samples -> {samples_dir}")
 
 
 if __name__ == "__main__":

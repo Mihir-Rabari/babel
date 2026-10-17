@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    container_name: babel-web
+    networks:
+      - dokploy-network
+    environment:
+      - ASSEMBLYAI_API_KEY=${ASSEMBLYAI_API_KEY}
+      - BABEL_ENGINE=assemblyai
+    restart: unless-stopped
+networks:
+  dokploy-network:
+    external: true
