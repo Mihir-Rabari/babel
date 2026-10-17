@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+fixtures/*.wav
+fixtures/*.mp3
+out/
+*.egg-info/
+.pytest_cache/
